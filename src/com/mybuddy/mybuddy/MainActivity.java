@@ -16,7 +16,7 @@ public class MainActivity extends ListActivity {
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		// TODO Auto-generated method stub
 		super.onListItemClick(l, v, position, id);
-		String clicked=classes[position];
+		String clicked = l.getItemAtPosition(position).toString();
 		Class nextClass = null;
 		try {
 			nextClass = Class.forName("com.mybuddy.mybuddy."+clicked);
@@ -33,6 +33,8 @@ public class MainActivity extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setListAdapter(new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1, classes));
+        ListView listView=getListView();
+        listView.setTextFilterEnabled(true);
     }
 
 
