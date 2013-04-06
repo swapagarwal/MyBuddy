@@ -26,6 +26,9 @@
         <activity android:name=".AufbauPrinciple"></activity>
         <activity android:name=".PolyatomicIonsList"></activity>
         <activity android:name=".ValenceElectronsChart"></activity>
+        <activity android:name=".Biodiversity"></activity>
+        <activity android:name=".PhysicalConstants"></activity>
+        <activity android:name=".PhysicsFormulae"></activity>
     </application>
 
 </manifest>
