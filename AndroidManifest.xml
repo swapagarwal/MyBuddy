@@ -30,6 +30,8 @@
         <activity android:name=".PhysicalConstants"></activity>
         <activity android:name=".PhysicsFormulae"></activity>
         <activity android:name=".QuadraticEquationSolver"></activity>
+        <activity android:name=".LinearSystemInTwoVariablesSolver"></activity>
+        <activity android:name=".LinearSystemInThreeVariablesSolver"></activity>
     </application>
 
 </manifest>
