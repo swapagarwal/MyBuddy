@@ -1,7 +1,6 @@
 package com.mybuddy.mybuddy;
 
 import android.os.Bundle;
-import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.view.Menu;
@@ -11,13 +10,13 @@ import android.widget.ListView;
 
 public class MainActivity extends ListActivity {
 	
-	String classes[]={"PeriodicTable","AufbauPrinciple","PolyatomicIonsList","ValenceElectronsChart","Biodiversity","PhysicalConstants","PhysicsFormulae","QuadraticEquationSolver","LinearSystemInTwoVariablesSolver","LinearSystemInThreeVariablesSolver"};
+	String classes[]={"PeriodicTable","AufbauPrinciple","PolyatomicIonsList","ValenceElectronsChart","Biodiversity","PhysicalConstants","PhysicsFormulae","QuadraticEquationSolver","LinearSystemInTwoVariablesSolver","LinearSystemInThreeVariablesSolver","TriangleSolver"};
     @Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		// TODO Auto-generated method stub
 		super.onListItemClick(l, v, position, id);
 		String clicked = l.getItemAtPosition(position).toString();
-		Class nextClass = null;
+		Class<?> nextClass = null;
 		try {
 			nextClass = Class.forName("com.mybuddy.mybuddy."+clicked);
 		} catch (ClassNotFoundException e) {
@@ -32,6 +31,7 @@ public class MainActivity extends ListActivity {
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
         setListAdapter(new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1, classes));
         ListView listView=getListView();
         listView.setTextFilterEnabled(true);

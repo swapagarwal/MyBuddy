@@ -24,11 +24,14 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
+        public static final int A=0x7f08001b;
+        public static final int B=0x7f08001c;
+        public static final int C=0x7f08001d;
         public static final int a=0x7f080014;
         public static final int a1=0x7f080002;
         public static final int a2=0x7f080008;
         public static final int a3=0x7f08000c;
-        public static final int action_settings=0x7f08001b;
+        public static final int action_settings=0x7f08001e;
         public static final int b=0x7f080015;
         public static final int b1=0x7f080004;
         public static final int b2=0x7f080009;
@@ -59,6 +62,7 @@ public final class R {
         public static final int linear_system_in_three_variables_solver=0x7f030002;
         public static final int linear_system_in_two_variables_solver=0x7f030003;
         public static final int quadratic_equation_solver=0x7f030004;
+        public static final int triangle_solver=0x7f030005;
     }
     public static final class menu {
         public static final int main=0x7f070000;
