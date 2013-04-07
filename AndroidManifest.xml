@@ -33,6 +33,9 @@
         <activity android:name=".LinearSystemInTwoVariablesSolver"></activity>
         <activity android:name=".LinearSystemInThreeVariablesSolver"></activity>
         <activity android:name=".TriangleSolver"></activity>
+        <activity android:name=".EquationsOfMotionSolver"></activity>
+        <activity android:name=".ResistanceCalculator"></activity>
+        <activity android:name=".BaseConverter"></activity>
     </application>
 
 </manifest>

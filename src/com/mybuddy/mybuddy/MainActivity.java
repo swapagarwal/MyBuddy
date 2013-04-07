@@ -10,7 +10,7 @@ import android.widget.ListView;
 
 public class MainActivity extends ListActivity {
 	
-	String classes[]={"PeriodicTable","AufbauPrinciple","PolyatomicIonsList","ValenceElectronsChart","Biodiversity","PhysicalConstants","PhysicsFormulae","QuadraticEquationSolver","LinearSystemInTwoVariablesSolver","LinearSystemInThreeVariablesSolver","TriangleSolver"};
+	String classes[]={"PeriodicTable","AufbauPrinciple","PolyatomicIonsList","ValenceElectronsChart","Biodiversity","PhysicalConstants","PhysicsFormulae","QuadraticEquationSolver","LinearSystemInTwoVariablesSolver","LinearSystemInThreeVariablesSolver","TriangleSolver","EquationsOfMotionSolver","ResistanceCalculator","BaseConverter"};
     @Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		// TODO Auto-generated method stub

@@ -4,5 +4,28 @@
     <string name="app_name">MyBuddy</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-
+	<string name="resistance">Resistance</string>
+    <string name="calculate">Calculate</string>
+    <string-array name="colors">
+        <item >Black</item>
+        <item >Brown</item>
+        <item >Red</item>
+        <item >Orange</item>
+        <item >Yellow</item>
+        <item >Green</item>
+        <item >Blue</item>
+        <item >Violet</item>
+        <item >Grey</item>
+        <item >White</item>
+    </string-array>
+    <string-array name="tolerance">
+        <item >Gold</item>
+        <item >Silver</item>
+        <item >Colorless</item>
+    </string-array>
+    <string name="dec" >Decimal</string>
+    <string name="bin">Binary</string>
+    <string name="oct" >Octal</string>
+    <string name="hex">Hexadecimal</string>
+    <string name="calc">Calculate</string>
 </resources>
