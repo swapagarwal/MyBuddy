@@ -29,6 +29,7 @@
         <activity android:name=".Biodiversity"></activity>
         <activity android:name=".PhysicalConstants"></activity>
         <activity android:name=".PhysicsFormulae"></activity>
+        <activity android:name=".QuadraticEquationSolver"></activity>
     </application>
 
 </manifest>
