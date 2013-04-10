@@ -17,7 +17,7 @@
             android:id="@+id/a"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:digits="1234567890.-" />
+            android:inputType="numberSigned|numberDecimal" />
 
         <TextView
             android:id="@+id/textView1"
@@ -29,7 +29,7 @@
             android:id="@+id/b"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:digits="1234567890.-" />
+            android:inputType="numberSigned|numberDecimal" />
 
         <TextView
             android:id="@+id/textView2"
@@ -41,7 +41,7 @@
             android:id="@+id/c"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:digits="1234567890.-" />
+            android:inputType="numberSigned|numberDecimal" />
 
         <TextView
             android:id="@+id/textView3"
@@ -50,6 +50,11 @@
             android:text=" = 0" />
     </LinearLayout>
 
+	<LinearLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal" >
+
     <Button
         android:id="@+id/solve"
         android:layout_width="wrap_content"
@@ -57,24 +62,33 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
         android:text="Solve" />
+    
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="Reset" />
+    </LinearLayout>
 
 <TextView
     android:id="@+id/x1"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="10dp"
-    android:text="x1 = " />
+    android:text="" />
 
 <TextView
     android:id="@+id/x2"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="x2 = " />
+    android:text="" />
 
 <TextView
     android:id="@+id/d"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Discriminant = " />
+    android:text="" />
 
 </LinearLayout>

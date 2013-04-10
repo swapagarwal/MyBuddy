@@ -10,11 +10,13 @@ import android.widget.Toast;
 
 public class BaseConverter extends Activity{
 	private EditText text;
+	private EditText result;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.base_converter);
 		text = (EditText) findViewById(R.id.editText1);
+		result = (EditText) findViewById(R.id.result);
 	}
 
 	public void onClick(View view) {
@@ -40,21 +42,21 @@ public class BaseConverter extends Activity{
 	    	  Integer inputValue = Integer.parseInt(text.getText().toString());
 	    	  if(todecButton.isChecked())
 	    	  {
-		        text.setText(String
+		        result.setText(String
 		            .valueOf(convertBinaryToDecimal(inputValue)));
 	    	  }
 	    	  if(tooctButton.isChecked())
 	    	  {
 	    		  Integer t = convertBinaryToDecimal(inputValue);
 	    		  
-		        text.setText(String
+		        result.setText(String
 		            .valueOf(convertDecimalToOctal(t)));
 	    	  }
 	    	  if(tohexButton.isChecked())
 	    	  {
 	    		  Integer t = convertBinaryToDecimal(inputValue);
 	    		  
-			        text.setText((convertDecimalToHexadecimal(t)));
+			        result.setText((convertDecimalToHexadecimal(t)));
 	    	  }
 	      } 
 	      else if (octButton.isChecked()) 
@@ -62,35 +64,35 @@ public class BaseConverter extends Activity{
 	    	  Integer inputValue = Integer.parseInt(text.getText().toString());
 	    	  if(todecButton.isChecked())
 	    	  {
-		        text.setText(String
+		        result.setText(String
 		            .valueOf(convertOctalToDecimal(inputValue)));
 	    	  }
 	    	  if(tobinButton.isChecked())
 	    	  {
 	    		  Integer t = convertOctalToDecimal(inputValue);
 	    		  
-		        text.setText(String
+		        result.setText(String
 		            .valueOf(convertDecimalToBinary(t)));
 	    	  }
 	    	  if(tohexButton.isChecked())
 	    	  {
 	    		  Integer t = convertOctalToDecimal(inputValue);
 	    		  
-			        text.setText((convertDecimalToHexadecimal(t)));
+			        result.setText((convertDecimalToHexadecimal(t)));
 	    	  }
 	      } 
 	      else if(decButton.isChecked()){
 	    	  Integer inputValue = Integer.parseInt(text.getText().toString());
 	    	  if(tobinButton.isChecked()){
-	        text.setText(String
+	        result.setText(String
 	            .valueOf(convertDecimalToBinary(inputValue)));
 	      }
 	    	  else if(tooctButton.isChecked()){
-	  	        text.setText(String
+	  	        result.setText(String
 	  	            .valueOf(convertDecimalToOctal(inputValue)));
 	  	        }
 	    	  else if(tohexButton.isChecked()){
-	  	        text.setText(
+	  	        result.setText(
 	  	            (convertDecimalToHexadecimal(inputValue)));
 	    	  }
 	      }
@@ -99,21 +101,21 @@ public class BaseConverter extends Activity{
 	    	  String inputValue = String.valueOf(text.getText().toString());
 	    	  if(todecButton.isChecked())
 	    	  {
-		        text.setText(String
+		        result.setText(String
 		            .valueOf(convertHexadecimalToDecimal(inputValue)));
 	    	  }
 	    	  if(tobinButton.isChecked())
 	    	  {
 	    		  Integer t = convertHexadecimalToDecimal(inputValue);
 	    		  
-		        text.setText(String
+		        result.setText(String
 		            .valueOf(convertDecimalToBinary(t)));
 	    	  }
 	    	  if(tooctButton.isChecked())
 	    	  {
 	    		  Integer t = convertHexadecimalToDecimal(inputValue);
 	    		  
-			        text.setText((convertDecimalToOctal(t)));
+			        result.setText((convertDecimalToOctal(t)));
 	    	  }
 	      } 
 	      break;

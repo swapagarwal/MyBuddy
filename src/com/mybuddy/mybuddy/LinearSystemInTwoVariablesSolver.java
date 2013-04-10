@@ -7,6 +7,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class LinearSystemInTwoVariablesSolver extends Activity{
 
@@ -32,6 +33,24 @@ public class LinearSystemInTwoVariablesSolver extends Activity{
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				if (a1.getText().length() == 0) {
+			        Toast.makeText(LinearSystemInTwoVariablesSolver.this, "Please enter all parameters",
+			            Toast.LENGTH_SHORT).show();return;}
+				if (b1.getText().length() == 0) {
+			        Toast.makeText(LinearSystemInTwoVariablesSolver.this, "Please enter all parameters",
+			            Toast.LENGTH_SHORT).show();return;}
+				if (c1.getText().length() == 0) {
+			        Toast.makeText(LinearSystemInTwoVariablesSolver.this, "Please enter all parameters",
+			            Toast.LENGTH_SHORT).show();return;}
+				if (a2.getText().length() == 0) {
+			        Toast.makeText(LinearSystemInTwoVariablesSolver.this, "Please enter all parameters",
+			            Toast.LENGTH_SHORT).show();return;}
+				if (b2.getText().length() == 0) {
+			        Toast.makeText(LinearSystemInTwoVariablesSolver.this, "Please enter all parameters",
+			            Toast.LENGTH_SHORT).show();return;}
+				if (c2.getText().length() == 0) {
+			        Toast.makeText(LinearSystemInTwoVariablesSolver.this, "Please enter all parameters",
+			            Toast.LENGTH_SHORT).show();return;}
 				i = Double.parseDouble(a1.getText().toString());
 				j = Double.parseDouble(b1.getText().toString());
 				k = Double.parseDouble(c1.getText().toString());
@@ -42,6 +61,15 @@ public class LinearSystemInTwoVariablesSolver extends Activity{
 				y.setText("y = "+Double.toString((i*n-l*k)/(i*m-l*j)));
 			}
 		});
+		Button reset = (Button) findViewById(R.id.reset);
+		reset.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				finish();
+				startActivity(getIntent());
+			}
+		});
 	}
-
 }

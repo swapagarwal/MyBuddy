@@ -7,6 +7,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class LinearSystemInThreeVariablesSolver extends Activity{
 
@@ -40,6 +41,42 @@ public class LinearSystemInThreeVariablesSolver extends Activity{
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				if (a1.getText().length() == 0) {
+			        Toast.makeText(LinearSystemInThreeVariablesSolver.this, "Please enter all parameters",
+			            Toast.LENGTH_SHORT).show();return;}
+				if (b1.getText().length() == 0) {
+			        Toast.makeText(LinearSystemInThreeVariablesSolver.this, "Please enter all parameters",
+			            Toast.LENGTH_SHORT).show();return;}
+				if (c1.getText().length() == 0) {
+			        Toast.makeText(LinearSystemInThreeVariablesSolver.this, "Please enter all parameters",
+			            Toast.LENGTH_SHORT).show();return;}
+				if (d1.getText().length() == 0) {
+			        Toast.makeText(LinearSystemInThreeVariablesSolver.this, "Please enter all parameters",
+			            Toast.LENGTH_SHORT).show();return;}
+				if (a2.getText().length() == 0) {
+			        Toast.makeText(LinearSystemInThreeVariablesSolver.this, "Please enter all parameters",
+			            Toast.LENGTH_SHORT).show();return;}
+				if (b2.getText().length() == 0) {
+			        Toast.makeText(LinearSystemInThreeVariablesSolver.this, "Please enter all parameters",
+			            Toast.LENGTH_SHORT).show();return;}
+				if (c2.getText().length() == 0) {
+			        Toast.makeText(LinearSystemInThreeVariablesSolver.this, "Please enter all parameters",
+			            Toast.LENGTH_SHORT).show();return;}
+				if (d2.getText().length() == 0) {
+			        Toast.makeText(LinearSystemInThreeVariablesSolver.this, "Please enter all parameters",
+			            Toast.LENGTH_SHORT).show();return;}
+				if (a3.getText().length() == 0) {
+			        Toast.makeText(LinearSystemInThreeVariablesSolver.this, "Please enter all parameters",
+			            Toast.LENGTH_SHORT).show();return;}
+				if (b3.getText().length() == 0) {
+			        Toast.makeText(LinearSystemInThreeVariablesSolver.this, "Please enter all parameters",
+			            Toast.LENGTH_SHORT).show();return;}
+				if (c3.getText().length() == 0) {
+			        Toast.makeText(LinearSystemInThreeVariablesSolver.this, "Please enter all parameters",
+			            Toast.LENGTH_SHORT).show();return;}
+				if (d3.getText().length() == 0) {
+			        Toast.makeText(LinearSystemInThreeVariablesSolver.this, "Please enter all parameters",
+			            Toast.LENGTH_SHORT).show();return;}
 				e = Double.parseDouble(a1.getText().toString());
 				f = Double.parseDouble(b1.getText().toString());
 				g = Double.parseDouble(c1.getText().toString());
@@ -55,6 +92,16 @@ public class LinearSystemInThreeVariablesSolver extends Activity{
 				x.setText("x = "+Double.toString(det(f,g,h,j,k,l,n,o,p)/det(e,f,g,i,j,k,m,n,o)));
 				y.setText("y = "+Double.toString(-det(e,g,h,i,k,l,m,o,p)/det(e,f,g,i,j,k,m,n,o)));
 				z.setText("z = "+Double.toString(det(e,f,h,i,j,l,m,n,p)/det(e,f,g,i,j,k,m,n,o)));
+			}
+		});
+		Button reset = (Button) findViewById(R.id.reset);
+		reset.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				finish();
+				startActivity(getIntent());
 			}
 		});
 	}

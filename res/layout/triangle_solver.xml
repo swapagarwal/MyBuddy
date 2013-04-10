@@ -23,8 +23,8 @@
             android:id="@+id/a"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:digits="1234567890.-"
-            android:text="0" />
+            android:inputType="numberSigned|numberDecimal"
+            android:text="" />
 
         <TextView
             android:id="@+id/textView1"
@@ -36,8 +36,8 @@
             android:id="@+id/b"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:digits="1234567890.-"
-            android:text="0" />
+            android:inputType="numberSigned|numberDecimal"
+            android:text="" />
 
         <TextView
             android:id="@+id/textView2"
@@ -49,8 +49,8 @@
             android:id="@+id/c"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:digits="1234567890.-"
-            android:text="0" />
+            android:inputType="numberSigned|numberDecimal"
+            android:text="" />
     </LinearLayout>
     <LinearLayout
         android:id="@+id/linearLayout1"
@@ -70,8 +70,8 @@
             android:id="@+id/A"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:digits="1234567890.-"
-            android:text="0" />
+            android:inputType="numberSigned|numberDecimal"
+            android:text="" />
 
         <TextView
             android:id="@+id/textView1"
@@ -83,8 +83,8 @@
             android:id="@+id/B"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:digits="1234567890.-"
-            android:text="0" />
+            android:inputType="numberSigned|numberDecimal"
+            android:text="" />
 
         <TextView
             android:id="@+id/textView2"
@@ -96,9 +96,14 @@
             android:id="@+id/C"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:digits="1234567890.-"
-            android:text="0" />
+            android:inputType="numberSigned|numberDecimal"
+            android:text="" />
     </LinearLayout>
+    
+    <LinearLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal" >
     <Button
         android:id="@+id/solve"
         android:layout_width="wrap_content"
@@ -106,4 +111,13 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:text="Solve" />
+    
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Reset" />
+    </LinearLayout>
 </LinearLayout>

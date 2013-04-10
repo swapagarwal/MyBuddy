@@ -7,15 +7,16 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
+
 <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:ems="10"
-        android:inputType="numberSigned|numberDecimal"
-         >
+    android:id="@+id/editText1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_alignRight="@+id/radioGroup1"
+    android:ems="10"
+    android:digits="1234567890ABCDEF.-" >
 
         <requestFocus />
     </EditText>
@@ -94,5 +95,16 @@
             android:layout_height="wrap_content"
             android:text="@string/hex" />
     </RadioGroup>
+
+    <EditText
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editText1"
+        android:layout_alignRight="@+id/radioGroup2"
+        android:layout_alignTop="@+id/editText1"
+        android:layout_toRightOf="@+id/editText1"
+        android:text=""
+        android:editable="false" />
 
 </RelativeLayout>

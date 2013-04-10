@@ -7,6 +7,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class QuadraticEquationSolver extends Activity{
 
@@ -22,15 +23,21 @@ public class QuadraticEquationSolver extends Activity{
 		final TextView x1 = (TextView) findViewById(R.id.x1);
 		final TextView x2 = (TextView) findViewById(R.id.x2);
 		final TextView d = (TextView) findViewById(R.id.d);
-		x1.setText("");
-		x2.setText("");
-		d.setText("");
 		Button solve = (Button) findViewById(R.id.solve);
 		solve.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				if (a.getText().length() == 0) {
+			        Toast.makeText(QuadraticEquationSolver.this, "Please enter all parameters",
+			            Toast.LENGTH_SHORT).show();return;}
+				if (b.getText().length() == 0) {
+			        Toast.makeText(QuadraticEquationSolver.this, "Please enter all parameters",
+			            Toast.LENGTH_SHORT).show();return;}
+				if (c.getText().length() == 0) {
+			        Toast.makeText(QuadraticEquationSolver.this, "Please enter all parameters",
+			            Toast.LENGTH_SHORT).show();return;}
 				i = Double.parseDouble(a.getText().toString());
 				j = Double.parseDouble(b.getText().toString());
 				k = Double.parseDouble(c.getText().toString());
@@ -43,9 +50,18 @@ public class QuadraticEquationSolver extends Activity{
 					x1.setText("x1 = "+Double.toString(-j/2)+" + "+Double.toString(Math.sqrt(-l)/2)+" i");
 					x2.setText("x2 = "+Double.toString(-j/2)+" - "+Double.toString(Math.sqrt(-l)/2)+" i");
 				}
-				//d.setText("Discriminant = "+Double.toString(l));
+				d.setText("Discriminant = "+Double.toString(l));
+			}
+		});
+		Button reset = (Button) findViewById(R.id.reset);
+		reset.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				finish();
+				startActivity(getIntent());
 			}
 		});
 	}
-
 }
